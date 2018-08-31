@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html,body {
+   background-image: url("background.jpg");
+   color: #ffffff;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d82a0f;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #115913;
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 32px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+<script type="text/javascript" src="popup.js"></script>
+</head>
+<body >
+  <img src="Music.png" style='width:38px;height:38px;'>
+  <label class="switch" style="float:right;" >
+   <input type="checkbox"  name="switch1" class="onoffswitch-checkbox" id="switch1">
+  <span class="slider round"></span>
+</label>
+<h2>SPECIAL EFFECT KEYBOARD</h2>
+</body>
+</html> 

@@ -1,0 +1,32 @@
+{
+"manifest_version": 2,
+"name": "SPECIAL EFFECT KEYBOARD",
+"version": "1.0",
+"content_scripts": [
+{
+
+"matches":[
+"*://*/*"
+],
+"js":["content.js"]
+}
+],
+  "permissions": [
+    "tabs", "<all_urls>",
+    "activeTab",
+    "storage",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+"background":{
+	"scripts":["background.js"]
+},
+ 
+"browser_action":{
+	"default_icon":"Music.png",
+	"default_popup":"music.html",
+	"default__title":"Musical Keys" 
+},"icons": { "16": "icon48.png",
+           "48": "icon48.png",
+          "128": "icon128.png" }
+}
